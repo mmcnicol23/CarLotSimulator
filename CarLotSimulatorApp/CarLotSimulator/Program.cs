@@ -1,33 +1,43 @@
 ﻿using System;
-
-namespace CarLotSimulator
+using CarLotSimulator;
 {
-    class Program
+   var car1 = new Car()
     {
-        static void Main(string[] args)
-        {
-            //TODO
+        Year = 2012,
+        Make = "Jeep",
+        Model = "Wrangler",
+        EngineNoise = "medium",
+        HonkNoise = "loud",
+        IsDriveable = "Yes"
+    };
+   
+    var car2 = new Car()
+    {
+        Year = 2024,
+        Make = "Chevrolet",
+        Model = "Corvette",
+        EngineNoise = "quiet",
+        HonkNoise = "medium",
+        IsDriveable = "Yes"
+    };
+    
+    var car3 = new Car()
+    {
+        Year = 1989,
+        Make = "Honda",
+        Model = "Civic",
+        EngineNoise = "loud",
+        HonkNoise = "quiet",
+        IsDriveable = "No"
+    };
 
-            //Create a seperate class file called Car
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
-            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
-            //The methods should take one string parameter: the respective noise property
-
-
-            //Now that the Car class is created we can instanciate 3 new cars
-            //Set the properties for each of the cars
-            //Call each of the methods for each car
-
-            //*************BONUS*************//
-
-            // Set the properties utilizing the 3 different ways we learned about, one way for each car
-
-            //*************BONUS X 2*************//
-
-            //Create a CarLot class
-            //It should have at least one property: a List of cars
-            //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
-            //At the end iterate through the list printing each of car's Year, Make, and Model to the console
-        }
-    }
+    Console.WriteLine("Car 1 Details:");
+    car1.CarDetails();
+    Console.WriteLine("----------------------------------------------");
+    Console.WriteLine("Car 2 Details:");
+    car2.CarDetails();
+    Console.WriteLine("----------------------------------------------");
+    Console.WriteLine("Car 3 Details:");
+    car3.CarDetails();
+   
 }
