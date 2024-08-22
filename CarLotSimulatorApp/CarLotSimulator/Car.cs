@@ -1,4 +1,6 @@
 using System;
+using System.Diagnostics;
+using Microsoft.VisualBasic;
 
 namespace CarLotSimulator;
 
@@ -17,5 +19,20 @@ public class Car
         Console.WriteLine($"This car has a {EngineNoise} level of engine noise and a {HonkNoise} level of honk noise.");
         Console.WriteLine($"Is this {Model} driveable? {IsDriveable}!"); 
     }
-  
+    //for the Custom Constructor
+    public Car(int year, string make, string model, string engineNoise, string honkNoise, string isDriveable)
+    {
+        Year = year;
+        Make = make;
+        Model = model;
+        EngineNoise = engineNoise;
+        HonkNoise = honkNoise;
+        IsDriveable = isDriveable;
+    }
+    public Car()
+    {
+        
+    }
+
+    
 }
