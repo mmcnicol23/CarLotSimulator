@@ -28,12 +28,12 @@ public class Car
         EngineNoise = engineNoise;
         HonkNoise = honkNoise;
         IsDriveable = isDriveable;
+        CarLot.numberOfCars++;
     }
-    //Need an empty default constructor to satisfy the Dot Notation and Object Initializer paramters:
+    //Need an empty default constructor to satisfy the Dot Notation and Object Initializer parameters:
     public Car()
     {
-        
+        CarLot.numberOfCars++;
     }
-
     
 }
